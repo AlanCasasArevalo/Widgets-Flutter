@@ -23,7 +23,7 @@ class MyContainer extends StatelessWidget {
             right: 20,
           ),
           child: Text(
-            'Hola amundio',
+            'Hola amundio \n me cachis en la mar',
             style: TextStyle(
               fontSize: 20,
               color: Colors.black,
