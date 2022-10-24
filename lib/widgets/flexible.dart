@@ -13,28 +13,18 @@ class MyFlexible extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Flexible(
-              fit: FlexFit.tight,
-              child: Container(
-                width: 50,
-                height: 50,
-                color: Colors.blue,
+              child: FlutterLogo(
+                size: 200,
               ),
             ),
             Flexible(
-              child:
-              Container(
-                width: 170,
-                height: 50,
-                color: Colors.red,
+              child: FlutterLogo(
+                size: 250,
               ),
             ),
             Flexible(
-              flex: 3,
-              child:
-              Container(
-                width: 290,
-                height: 50,
-                color: Colors.yellow,
+              child: FlutterLogo(
+                size: 3000,
               ),
             ),
           ],
