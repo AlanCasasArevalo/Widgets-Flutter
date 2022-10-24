@@ -21,8 +21,7 @@ class MyRowWithOverFlow extends StatelessWidget {
                 height: 50,
                 color: Colors.blue,
               ),
-              SizedBox(
-                width: 200,
+              Expanded(
                 child: Text(
                   "Hola como va Hola como va Hola como va Hola como va Hola como va Hola como va Hola como va Hola como va Hola como va Hola como va Hola como va Hola como va ",
                 ),
