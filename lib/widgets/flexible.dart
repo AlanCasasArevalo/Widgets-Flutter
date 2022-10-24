@@ -13,7 +13,6 @@ class MyFlexible extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Flexible(
-              flex: 2,
               fit: FlexFit.tight,
               child: Container(
                 width: 50,
@@ -24,9 +23,17 @@ class MyFlexible extends StatelessWidget {
             Flexible(
               child:
               Container(
-                width: 50,
+                width: 170,
                 height: 50,
                 color: Colors.red,
+              ),
+            ),
+            Flexible(
+              child:
+              Container(
+                width: 170,
+                height: 50,
+                color: Colors.yellow,
               ),
             ),
           ],
