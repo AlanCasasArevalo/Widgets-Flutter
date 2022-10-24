@@ -9,24 +9,25 @@ class MyFlexible extends StatelessWidget {
         color: Colors.white,
         alignment: Alignment.centerLeft,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.blue,
+            Flexible(
+              flex: 2,
+              fit: FlexFit.tight,
+              child: Container(
+                width: 50,
+                height: 50,
+                color: Colors.blue,
+              ),
             ),
             Flexible(
               child:
-              Text("hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como ")
-              /*
               Container(
-                width: 600,
+                width: 50,
                 height: 50,
                 color: Colors.red,
               ),
-               */
             ),
           ],
         ),
