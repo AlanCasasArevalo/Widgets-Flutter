@@ -8,7 +8,7 @@ class MyStack extends StatelessWidget {
       child: Container(
         color: Colors.white,
         child: Stack(
-          alignment: Alignment.center,
+          alignment: Alignment.topCenter,
           children: [
             Container(
               width: 150,
