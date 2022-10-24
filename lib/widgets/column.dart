@@ -14,15 +14,21 @@ class MyColumn extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
+                /*
+                Flex permite hacer "espacios" imaginarios realizando una especie de contenedor nuevo expandido
+                Cuando sumamos un numero a ese flex lo que hacemos es crear un nuevo espacio dentro del expanded dividiendo el contenedor padre
+                en los flex totales si tuvieramos 2 contenedores Expanded con 1 flex cada uno con diferentes numeros dichos numeros serian los
+                espacios contenidos en la columna o en la fila
+                 */
                 Expanded(
-                  flex: 2,
+                  flex: 1,
                   child: Container(
                     height: 100,
                     color: Colors.red,
                   ),
                 ),
                 Expanded(
-                  flex: 2,
+                  flex: 4,
                   child: Container(
                     height: 100,
                     color: Colors.cyan,
