@@ -39,17 +39,45 @@ class MyContainer extends StatelessWidget {
               shape: BoxShape.circle
                */
               shape: BoxShape.circle,
+              gradient: const RadialGradient(
+                colors: [
+                  Colors.black,
+                  Colors.red,
+                  Colors.lightGreenAccent
+                ],
+                stops: [
+                  .3,
+                  .8,
+                  1,
+                ]
+              ),
+              /*
+              const LinearGradient(
+                colors: [
+                  Colors.yellow,
+                  Colors.red,
+                  Colors.blue,
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                stops: [
+                  .2,
+                  .3,
+                  .4,
+                ],
+              ),
+               */
               // Sombras
               boxShadow: [
                 BoxShadow(
-                  color: Colors.brown.withOpacity(
+                    color: Colors.brown.withOpacity(
                       .50,
-                  ),
-                  blurRadius: 25,
-                  offset: Offset(-10, 20)
-                  // Este parametro es para que el sombreado se salga del contenedor
-                  // spreadRadius: 50
-                ),
+                    ),
+                    blurRadius: 25,
+                    offset: Offset(-10, 20)
+                    // Este parametro es para que el sombreado se salga del contenedor
+                    // spreadRadius: 50
+                    ),
                 /*
                 BoxShadow(
                   color: Colors.greenAccent.withOpacity(
