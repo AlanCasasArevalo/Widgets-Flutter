@@ -15,9 +15,7 @@ class MyStack extends StatelessWidget {
               width: 500,
               height: 500,
               child: Stack(
-                // No es lo mismo tener AlignmentDirectional que Alignment debido a que se comportan teniendo en cuenta la direccion en la que comienzan
-                // a escribir en los paises de escritura arabe por ejemplo de derecha a izq
-                alignment: AlignmentDirectional.topEnd,
+                alignment: Alignment.center,
                 // alignment: Alignment.topLeft,
                 children: [
                   Container(
@@ -30,12 +28,9 @@ class MyStack extends StatelessWidget {
                     height: 50,
                     color: Colors.red,
                   ),
-                  SizedBox(
-                    width: 100,
-                    child: Text(
-                      "Hola",
-                      textAlign: TextAlign.right,
-                    ),
+                  Text(
+                    "Hola",
+                    textAlign: TextAlign.end,
                   ),
                 ],
               ),
