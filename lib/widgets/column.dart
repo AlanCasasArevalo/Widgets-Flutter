@@ -16,7 +16,13 @@ class MyColumn extends StatelessWidget {
               // Esto solo funciona si el contenedor de column esta contenido en un contenedor center
               // mainAxisSize: MainAxisSize.min,
               // Este parametro mainAxisAlignment sirve para poder alinear los elementos entre si
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.min,
+              /*
+              Usar ambos parametros no tiene sentido porque el parametro mainAxisSize anula al parametro mainAxisAlignment
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.min,
+               */
               children: [
                 const Text('Hola Amundio'),
                 const Text(
