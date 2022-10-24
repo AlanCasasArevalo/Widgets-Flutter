@@ -20,7 +20,8 @@ class MyStack extends StatelessWidget {
                 children: [
                   Positioned(
                     top: 10,
-                    left: 10,
+                    left: 16,
+                    right: 16,
                     child: Container(
                       width: 150,
                       height: 150,
