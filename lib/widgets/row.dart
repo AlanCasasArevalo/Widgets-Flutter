@@ -8,23 +8,29 @@ class MyRow extends StatelessWidget {
       color: Colors.grey,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
-            width: 50,
-            height: 60,
-            color: Colors.red,
+          Expanded(
+            flex: 1,
+            child: Container(
+              width: 50,
+              height: 60,
+              color: Colors.red,
+            ),
           ),
           Container(
             width: 50,
             height: 50,
             color: Colors.blue,
           ),
-          Container(
-            width: 50,
-            height: 100,
-            color: Colors.yellow,
+          Expanded(
+            flex: 4,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.yellow,
+            ),
           ),
         ],
       ),
