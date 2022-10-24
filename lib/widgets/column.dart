@@ -16,31 +16,38 @@ class MyColumn extends StatelessWidget {
               // Esto solo funciona si el contenedor de column esta contenido en un contenedor center
               // mainAxisSize: MainAxisSize.min,
               // Este parametro mainAxisAlignment sirve para poder alinear los elementos entre si
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              mainAxisSize: MainAxisSize.min,
               /*
               Usar ambos parametros no tiene sentido porque el parametro mainAxisSize anula al parametro mainAxisAlignment
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               mainAxisSize: MainAxisSize.min,
                */
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('Hola Amundio'),
-                const Text(
-                  'Como te esta',
-                  style: TextStyle(
-                    color: Colors.lightGreenAccent,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
+                Column(
+                  children: [
+                    const Text('Hola Amundio'),
+                    const Text(
+                      'Como te esta',
+                      style: TextStyle(
+                        color: Colors.lightGreenAccent,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const Text('Tratando la vida'),
+                  ],
                 ),
-                const Text('Tratando la vida'),
-                Container(
-                  height: 100,
-                  color: Colors.pink,
-                ),
-                Container(
-                  height: 100,
-                  color: Colors.red,
+                Column(
+                  children: [
+                    Container(
+                      height: 100,
+                      color: Colors.pink,
+                    ),
+                    Container(
+                      height: 100,
+                      color: Colors.red,
+                    ),
+                  ],
                 ),
               ],
             ),
