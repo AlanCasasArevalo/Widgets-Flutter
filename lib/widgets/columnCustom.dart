@@ -11,7 +11,9 @@ class MyColumnCustom extends StatelessWidget {
         child: Center(
           child: Container(
             color: Colors.grey,
+            width: 400,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Flexible(
                   child: FlutterLogo(
