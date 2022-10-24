@@ -18,6 +18,7 @@ class MyStack extends StatelessWidget {
                 alignment: Alignment.center,
                 // alignment: Alignment.topLeft,
                 children: [
+                  // Los widgets Positioned solo podemos usarlos en los stacks
                   Positioned(
                     top: 0,
                     bottom: 0,
