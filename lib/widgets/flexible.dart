@@ -29,9 +29,10 @@ class MyFlexible extends StatelessWidget {
               ),
             ),
             Flexible(
+              flex: 3,
               child:
               Container(
-                width: 170,
+                width: 290,
                 height: 50,
                 color: Colors.yellow,
               ),
