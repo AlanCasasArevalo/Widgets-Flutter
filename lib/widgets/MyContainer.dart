@@ -17,7 +17,7 @@ class MyContainer extends StatelessWidget {
           // width: 250,
           // height: 250,
           color: Colors.amber,
-          alignment: Alignment.center,
+          // alignment: Alignment.center,
           padding: EdgeInsets.only(
             bottom: 20,
             right: 20,
