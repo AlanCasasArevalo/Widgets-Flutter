@@ -34,9 +34,12 @@ class MyStack extends StatelessWidget {
                     height: 50,
                     color: Colors.red,
                   ),
-                  Text(
-                    "Hola",
-                    textAlign: TextAlign.end,
+                  Positioned(
+                    bottom: 0,
+                    child: Text(
+                      "Hola",
+                      textAlign: TextAlign.end,
+                    ),
                   ),
                 ],
               ),
