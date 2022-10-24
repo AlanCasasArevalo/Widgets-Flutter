@@ -20,12 +20,13 @@ class MyStack extends StatelessWidget {
                 children: [
                   Positioned(
                     top: 10,
-                    left: 16,
                     right: 16,
+                    bottom: 20,
                     child: Container(
                       width: 150,
                       height: 150,
                       color: Colors.green,
+                      child: Text("GREEN"),
                     ),
                   ),
                   Container(
