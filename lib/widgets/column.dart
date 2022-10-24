@@ -13,6 +13,7 @@ class MyColumn extends StatelessWidget {
             color: Colors.grey,
             child: Column(
               // Con este parametro se hace que la columna ocupe solo la altura que necesitan sus hijos, no toda la altura.
+              // Esto solo funciona si el contenedor de column esta contenido en un contenedor center
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text('Hola Amundio'),
