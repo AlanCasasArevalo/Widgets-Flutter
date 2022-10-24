@@ -34,6 +34,13 @@ class MyColumn extends StatelessWidget {
                     color: Colors.cyan,
                   ),
                 ),
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                    height: 100,
+                    color: Colors.yellowAccent,
+                  ),
+                ),
               ],
             ),
           ),
