@@ -14,7 +14,9 @@ class MyColumn extends StatelessWidget {
             child: Column(
               // Con este parametro se hace que la columna ocupe solo la altura que necesitan sus hijos, no toda la altura.
               // Esto solo funciona si el contenedor de column esta contenido en un contenedor center
-              mainAxisSize: MainAxisSize.min,
+              // mainAxisSize: MainAxisSize.min,
+              // Este parametro mainAxisAlignment sirve para poder alinear los elementos entre si
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text('Hola Amundio'),
                 const Text(
