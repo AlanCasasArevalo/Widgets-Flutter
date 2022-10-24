@@ -19,11 +19,12 @@ class MyStack extends StatelessWidget {
                 // alignment: Alignment.topLeft,
                 children: [
                   Positioned(
-                    top: 10,
-                    right: 16,
-                    bottom: 20,
+                    top: 0,
+                    bottom: 0,
+                    right: 0,
+                    left: 0,
                     child: Container(
-                      height: 150,
+                      height: 100,
                       color: Colors.green,
                       child: Text("GREEN"),
                     ),
