@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'widgets/flexible.dart';
+import 'widgets/columnFlexible.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyFlexible(),
+      home: MyColumnFlexible(),
     );
   }
 }
