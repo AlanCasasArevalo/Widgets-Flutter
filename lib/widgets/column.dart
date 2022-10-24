@@ -12,22 +12,20 @@ class MyColumn extends StatelessWidget {
           child: Container(
             color: Colors.grey,
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
-                /*
-                Expanded realiza un expansion de todos el espacio disponible en la columna
-                 */
+                Container(
+                  height: 50,
+                  color: Colors.pink,
+                ),
                 Expanded(
                   child: Container(
                     height: 100,
-                    color: Colors.pink,
+                    color: Colors.red,
                   ),
                 ),
                 Container(
-                  height: 100,
-                  color: Colors.red,
-                ),
-                Container(
-                  height: 100,
+                  height: 50,
                   color: Colors.blue,
                 ),
               ],
