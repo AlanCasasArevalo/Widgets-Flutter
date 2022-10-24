@@ -14,10 +14,6 @@ class MyColumn extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Container(
-                  height: 50,
-                  color: Colors.pink,
-                ),
                 Expanded(
                   flex: 2,
                   child: Container(
@@ -26,20 +22,11 @@ class MyColumn extends StatelessWidget {
                   ),
                 ),
                 Expanded(
+                  flex: 2,
                   child: Container(
                     height: 100,
                     color: Colors.cyan,
                   ),
-                ),
-                Expanded(
-                  child: Container(
-                    height: 100,
-                    color: Colors.deepOrangeAccent,
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.blue,
                 ),
               ],
             ),
