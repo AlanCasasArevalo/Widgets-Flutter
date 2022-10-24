@@ -14,38 +14,11 @@ class MyColumnFlexible extends StatelessWidget {
             width: 300,
             child: Column(
               children: [
-                Container(
-                  width: double.infinity,
-                  color: Colors.red,
-                  child: Text("""
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  Hello amundio,
-                  """),
+                FlutterLogo(
+                  size: 200,
                 ),
-                Flexible(
-                  child: Container(
-                    height: 200,
-                    color: Colors.cyan,
-                  ),
+                FlutterLogo(
+                  size: 300,
                 ),
               ],
             ),
