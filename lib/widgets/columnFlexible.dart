@@ -14,13 +14,32 @@ class MyColumnFlexible extends StatelessWidget {
             width: 300,
             child: Column(
               children: [
-                Flexible(
-                  child: Container(
-                    height: 500,
-                    width: double.infinity,
-                    color: Colors.red,
-                    child: Text("Hello amundio"),
-                  ),
+                Container(
+                  width: double.infinity,
+                  color: Colors.red,
+                  child: Text("""
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  Hello amundio,
+                  """),
                 ),
                 Flexible(
                   child: Container(
