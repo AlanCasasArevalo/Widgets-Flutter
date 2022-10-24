@@ -14,6 +14,7 @@ class MyCustomRow extends StatelessWidget {
             FlutterLogo(
               size: 100,
             ),
+            Spacer(),
             FlutterLogo(
               size: 100,
             ),
