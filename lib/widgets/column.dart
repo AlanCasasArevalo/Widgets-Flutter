@@ -23,31 +23,24 @@ class MyColumn extends StatelessWidget {
                */
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
-                  children: [
-                    const Text('Hola Amundio'),
-                    const Text(
-                      'Como te esta',
-                      style: TextStyle(
-                        color: Colors.lightGreenAccent,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const Text('Tratando la vida'),
-                  ],
+                const Text('Hola Amundio'),
+                const Text(
+                  'Como te esta',
+                  style: TextStyle(
+                    color: Colors.lightGreenAccent,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-                Column(
-                  children: [
-                    Container(
-                      height: 100,
-                      color: Colors.pink,
-                    ),
-                    Container(
-                      height: 100,
-                      color: Colors.red,
-                    ),
-                  ],
+                const Text('Tratando la vida'),
+                const Spacer(),
+                Container(
+                  height: 100,
+                  color: Colors.pink,
+                ),
+                Container(
+                  height: 100,
+                  color: Colors.red,
                 ),
               ],
             ),
