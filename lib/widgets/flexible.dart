@@ -17,10 +17,16 @@ class MyFlexible extends StatelessWidget {
               height: 50,
               color: Colors.blue,
             ),
-            Container(
-              width: 200,
-              height: 50,
-              color: Colors.red,
+            Flexible(
+              child:
+              Text("hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como hola como ")
+              /*
+              Container(
+                width: 600,
+                height: 50,
+                color: Colors.red,
+              ),
+               */
             ),
           ],
         ),
