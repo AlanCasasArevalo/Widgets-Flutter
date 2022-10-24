@@ -24,6 +24,7 @@ class MyColumn extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text('Hola Amundio'),
+                const Spacer(),
                 const Text(
                   'Como te esta',
                   style: TextStyle(
