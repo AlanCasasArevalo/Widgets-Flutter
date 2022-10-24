@@ -36,6 +36,13 @@ class MyStack extends StatelessWidget {
                     color: Colors.red,
                   ),
                   Positioned(
+                    bottom: -30,
+                    right: -30,
+                    child: FlutterLogo(
+                      size: 200,
+                    ),
+                  ),
+                  Positioned(
                     bottom: 0,
                     child: Text(
                       "Hola",
