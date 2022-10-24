@@ -18,6 +18,7 @@ class MyFlexible extends StatelessWidget {
               ),
             ),
             Flexible(
+              flex: 2,
               child: FlutterLogo(
                 size: 250,
               ),
