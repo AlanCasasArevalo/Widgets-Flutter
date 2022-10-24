@@ -16,8 +16,8 @@ class MyColumn extends StatelessWidget {
               // Esto solo funciona si el contenedor de column esta contenido en un contenedor center
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('Hola Amundio'),
-                Text(
+                const Text('Hola Amundio'),
+                const Text(
                   'Como te esta',
                   style: TextStyle(
                     color: Colors.lightGreenAccent,
@@ -25,7 +25,7 @@ class MyColumn extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text('Tratando la vida'),
+                const Text('Tratando la vida'),
                 Container(
                   height: 100,
                   color: Colors.pink,
