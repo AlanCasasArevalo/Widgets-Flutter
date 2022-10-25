@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/stack.dart';
+import 'widgets/scaffold.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyStack(),
+      home: MyScaffold(),
     );
   }
 }
