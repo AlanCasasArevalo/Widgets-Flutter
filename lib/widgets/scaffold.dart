@@ -28,9 +28,19 @@ class MyScaffold extends StatelessWidget {
           ],
         ),
       ),
-      drawer: Container(
-        color: Colors.white,
-        width: 350,
+      drawer: Drawer(
+        elevation: 20,
+        child: Column(
+          children: [
+            SizedBox(
+              height: 45,
+            ),
+            Text(
+              "Texto",
+              style: TextStyle(color: Colors.black),
+            ),
+          ],
+        ),
       ),
     );
   }
