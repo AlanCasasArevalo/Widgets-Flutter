@@ -6,6 +6,8 @@ class MyScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: false,
+      // Este parametro extendBody (por defecto a false) realiza una extension del cuerpo, en todas direcciones, por tanto rara vez se usara.
+      extendBody: true,
       body: Container(
         color: Colors.grey,
         width: double.infinity,
