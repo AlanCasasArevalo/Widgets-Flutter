@@ -68,6 +68,11 @@ class MyScaffold extends StatelessWidget {
       // Esto sirve para poder localizar el boton flotante
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
+        child: Icon(
+          // Se pueden ver los iconos que hay en esta url https://api.flutter.dev/flutter/material/Icons-class.html
+          Icons.add,
+          size: 30,
+        ),
         onPressed: () => {
           print("se ha pulsado el boton")
         },
