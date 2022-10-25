@@ -31,6 +31,9 @@ class MyScaffold extends StatelessWidget {
       // Este parametro es para permitir el gesto de arrastrar en el menu lateral o no por defecto es true
       drawerEnableOpenDragGesture: false,
       endDrawerEnableOpenDragGesture: false,
+      onDrawerChanged: (isDrawerOpen) => {
+        print("El drawer esta abierto $isDrawerOpen")
+      },
       drawer: Drawer(
         elevation: 20,
         child: Column(
