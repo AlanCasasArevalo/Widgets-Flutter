@@ -65,6 +65,11 @@ class MyScaffold extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => {
+          print("se ha pulsado el boton")
+        },
+      ),
     );
   }
 }
