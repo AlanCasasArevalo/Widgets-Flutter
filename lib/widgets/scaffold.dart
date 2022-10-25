@@ -5,6 +5,8 @@ class MyScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // Este parametro resizeToAvoidBottomInset (por defecto true) sirve para redimensionar la pantalla cuando se abre el teclado
+      resizeToAvoidBottomInset: false,
       body: Container(
         color: Colors.grey,
         width: double.infinity,
