@@ -57,6 +57,9 @@ class MyScaffold extends StatelessWidget {
           ],
         ),
       ),
+      // Este parametro sirve para decirle el punto minimo de ancho para deslizar la pantalla, por defecto es 20
+      // asi que si aumentamos el ancho se puede tirar del menu lateral con menos dificultad
+      drawerEdgeDragWidth: 100,
     );
   }
 }
