@@ -34,6 +34,23 @@ class MyScaffold extends StatelessWidget {
       onDrawerChanged: (isDrawerOpen) => {
         print("El drawer esta abierto $isDrawerOpen")
       },
+      endDrawer: Drawer(
+        elevation: 20,
+        child: Column(
+          children: [
+            SizedBox(
+              height: 45,
+            ),
+            Text(
+              "Texto",
+              style: TextStyle(color: Colors.black),
+            ),
+          ],
+        ),
+      ),
+      onEndDrawerChanged: (isDrawerOpen) => {
+        print("El enddrawer esta abierto $isDrawerOpen")
+      },
       drawer: Drawer(
         elevation: 20,
         child: Column(
