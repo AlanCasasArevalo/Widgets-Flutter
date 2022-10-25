@@ -31,9 +31,8 @@ class MyScaffold extends StatelessWidget {
       // Este parametro es para permitir el gesto de arrastrar en el menu lateral o no por defecto es true
       drawerEnableOpenDragGesture: false,
       endDrawerEnableOpenDragGesture: false,
-      onDrawerChanged: (isDrawerOpen) => {
-        print("El drawer esta abierto $isDrawerOpen")
-      },
+      onDrawerChanged: (isDrawerOpen) =>
+          {print("El drawer esta abierto $isDrawerOpen")},
       endDrawer: Drawer(
         elevation: 20,
         child: Column(
@@ -48,12 +47,19 @@ class MyScaffold extends StatelessWidget {
           ],
         ),
       ),
-      onEndDrawerChanged: (isDrawerOpen) => {
-        print("El enddrawer esta abierto $isDrawerOpen")
-      },
-      bottomNavigationBar: Container(
-        height: 100,
-        color: Color(0xfff0f0f0),
+      onEndDrawerChanged: (isDrawerOpen) =>
+          {print("El enddrawer esta abierto $isDrawerOpen")},
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            label: "Home",
+            icon: Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(
+            label: "Profile",
+            icon: Icon(Icons.person),
+          ),
+        ],
       ),
       drawer: Drawer(
         elevation: 20,
@@ -77,9 +83,7 @@ class MyScaffold extends StatelessWidget {
           Icons.add,
           size: 30,
         ),
-        onPressed: () => {
-          print("se ha pulsado el boton")
-        },
+        onPressed: () => {print("se ha pulsado el boton")},
       ),
     );
   }
