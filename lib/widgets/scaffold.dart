@@ -5,8 +5,6 @@ class MyScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Este parametro resizeToAvoidBottomInset (por defecto true) sirve para redimensionar la pantalla cuando se abre el teclado
-      resizeToAvoidBottomInset: false,
       body: Container(
         color: Colors.grey,
         width: double.infinity,
@@ -29,6 +27,20 @@ class MyScaffold extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.settings,
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.logout,
+            ),
+          ),
+        ],
         elevation: 0,
         systemOverlayStyle:
             SystemUiOverlayStyle(statusBarBrightness: Brightness.dark),
@@ -56,22 +68,6 @@ class MyScaffold extends StatelessWidget {
       endDrawerEnableOpenDragGesture: false,
       onDrawerChanged: (isDrawerOpen) =>
           {print("El drawer esta abierto $isDrawerOpen")},
-      endDrawer: Drawer(
-        elevation: 20,
-        child: Column(
-          children: [
-            SizedBox(
-              height: 45,
-            ),
-            Text(
-              "Texto",
-              style: TextStyle(color: Colors.black),
-            ),
-          ],
-        ),
-      ),
-      onEndDrawerChanged: (isDrawerOpen) =>
-          {print("El enddrawer esta abierto $isDrawerOpen")},
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
