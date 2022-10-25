@@ -65,6 +65,8 @@ class MyScaffold extends StatelessWidget {
           ],
         ),
       ),
+      // Esto sirve para poder localizar el boton flotante
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () => {
           print("se ha pulsado el boton")
