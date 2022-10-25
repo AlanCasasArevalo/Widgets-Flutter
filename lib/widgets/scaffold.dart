@@ -51,6 +51,10 @@ class MyScaffold extends StatelessWidget {
       onEndDrawerChanged: (isDrawerOpen) => {
         print("El enddrawer esta abierto $isDrawerOpen")
       },
+      bottomNavigationBar: Container(
+        height: 100,
+        color: Color(0xfff0f0f0),
+      ),
       drawer: Drawer(
         elevation: 20,
         child: Column(
