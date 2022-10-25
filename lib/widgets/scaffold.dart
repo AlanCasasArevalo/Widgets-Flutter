@@ -5,15 +5,25 @@ class MyScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: false,
-      // Este parametro extendBody (por defecto a false) realiza una extension del cuerpo, en todas direcciones, por tanto rara vez se usara.
-      extendBody: true,
       body: Container(
         color: Colors.grey,
         width: double.infinity,
         height: double.infinity,
-        child: Center(
-          child: Text("Hola amundio"),
+        child: Column(
+          children: [
+            Expanded(
+              child: Center(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25),
+                  child: TextField(),
+                ),
+              ),
+            ),
+            Text("Hola amigo como estas"),
+            SizedBox(
+              height: 35,
+            ),
+          ],
         ),
       ),
       appBar: AppBar(
