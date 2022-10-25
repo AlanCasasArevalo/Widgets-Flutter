@@ -6,13 +6,9 @@ class MyScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // Sombra en la barra de navegacion
-        elevation: 10,
-        // Color de Sombra en la barra de navegacion
-        shadowColor: Colors.redAccent,
-        systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarBrightness: Brightness.dark
-        ),
+        elevation: 0,
+        systemOverlayStyle:
+            SystemUiOverlayStyle(statusBarBrightness: Brightness.dark),
         backgroundColor: Color(0xff01579b),
         // Estilo del texto de la barra de navegacion
         titleTextStyle: TextStyle(
@@ -27,13 +23,14 @@ class MyScaffold extends StatelessWidget {
             ),
             Text(
               "Best",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold
-              ),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ],
         ),
+      ),
+      drawer: Container(
+        color: Colors.white,
+        width: 350,
       ),
     );
   }
