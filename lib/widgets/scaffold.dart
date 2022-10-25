@@ -28,6 +28,21 @@ class MyScaffold extends StatelessWidget {
           ],
         ),
       ),
+      // Se pueden tener 2 Drawers uno a la derecha y otro a la izq
+      endDrawer: Drawer(
+        elevation: 20,
+        child: Column(
+          children: [
+            SizedBox(
+              height: 45,
+            ),
+            Text(
+              "Texto",
+              style: TextStyle(color: Colors.black),
+            ),
+          ],
+        ),
+      ),
       drawer: Drawer(
         elevation: 20,
         child: Column(
