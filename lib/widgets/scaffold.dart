@@ -8,6 +8,8 @@ class MyScaffold extends StatelessWidget {
       appBar: AppBar(
         // Sombra en la barra de navegacion
         elevation: 10,
+        // Color de Sombra en la barra de navegacion
+        shadowColor: Colors.redAccent,
         systemOverlayStyle: SystemUiOverlayStyle(
           statusBarBrightness: Brightness.dark
         ),
