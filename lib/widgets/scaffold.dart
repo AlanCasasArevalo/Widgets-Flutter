@@ -5,6 +5,13 @@ class MyScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // Este parmetro extendBodyBehindAppBar el valor por defecto es false es para que el cuerpo de la app se expanda hasta ocupar toda la ventana disponible,
+      // lo cual dejaria el container con el Hola Amundio detras de la Appbar, no es que haya desaparecido hola amundio, es que esta detras de la Appbar
+      extendBodyBehindAppBar: true,
+      body: Container(
+        color: Colors.grey,
+        child: Text("Hola amundio"),
+      ),
       appBar: AppBar(
         elevation: 0,
         systemOverlayStyle:
