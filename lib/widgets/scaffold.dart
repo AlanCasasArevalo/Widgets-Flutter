@@ -28,21 +28,8 @@ class MyScaffold extends StatelessWidget {
           ],
         ),
       ),
-      // Se pueden tener 2 Drawers uno a la derecha y otro a la izq
-      endDrawer: Drawer(
-        elevation: 20,
-        child: Column(
-          children: [
-            SizedBox(
-              height: 45,
-            ),
-            Text(
-              "Texto",
-              style: TextStyle(color: Colors.black),
-            ),
-          ],
-        ),
-      ),
+      // Este parametro es para permitir el gesto de arrastrar en el menu lateral o no por defecto es true
+      drawerEnableOpenDragGesture: false,
       drawer: Drawer(
         elevation: 20,
         child: Column(
@@ -57,9 +44,6 @@ class MyScaffold extends StatelessWidget {
           ],
         ),
       ),
-      // Este parametro sirve para decirle el punto minimo de ancho para deslizar la pantalla, por defecto es 20
-      // asi que si aumentamos el ancho se puede tirar del menu lateral con menos dificultad
-      drawerEdgeDragWidth: 100,
     );
   }
 }
