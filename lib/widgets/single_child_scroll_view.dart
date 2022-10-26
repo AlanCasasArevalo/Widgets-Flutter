@@ -10,22 +10,27 @@ class MySingleChildScrollView extends StatelessWidget {
         children: [
           Container(
             height: 100,
-            child: SingleChildScrollView(
-              // El NeverScrollableScrollPhysics hace que se eliminen en ambas plataformas el efecto muelle
-              physics: NeverScrollableScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: List.generate(
-                  18,
-                  (index) => Container(
-                    height: 100,
-                    width: 100,
-                    alignment: Alignment.center,
-                    color: Colors.primaries[index],
-                    child: Text("El color $index"),
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 300,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: List.generate(
+                        18,
+                        (index) => Container(
+                          height: 100,
+                          width: 100,
+                          alignment: Alignment.center,
+                          color: Colors.primaries[index],
+                          child: Text("El color $index"),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-              ),
+              ],
             ),
           ),
           Expanded(
