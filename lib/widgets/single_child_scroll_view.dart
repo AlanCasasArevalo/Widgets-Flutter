@@ -37,9 +37,9 @@ class MySingleChildScrollView extends StatelessWidget {
           ),
           Expanded(
             child: SizedBox(
+              // Este widget es mejor usarlo con pocos elementos, cuando se usan muchos elementos de renderizacion es mejor usar un ListView
               child: SingleChildScrollView(
-                // Con el parametro keyboardDismissBehavior (por defecto ScrollViewKeyboardDismissBehavior.manual) lo que hacemos es esconder el teclado cuando empecemos a hacer scroll en el listado
-                keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
+                keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
                 reverse: false,
                 padding: EdgeInsets.all(8),
                 child: Column(
