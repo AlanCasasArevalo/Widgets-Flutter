@@ -4,16 +4,22 @@ class MySafeArea extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Al poner el SafeArea como contenedor del container, se ve raro debido a que el SafeArea no hace bien
-      // su trabajo dejando partes en blanco justo por encima del texto Hello
-      body: SafeArea(
-        child: Container(
-          color: Colors.grey,
-          width: double.infinity,
-          height: double.infinity,
+      body: Container(
+        color: Colors.grey,
+        width: double.infinity,
+        height: double.infinity,
+        // Haciendo que el SafeArea contenga el hijo Column hacemos que se vea mejor la imagen
+        child: SafeArea(
+          // Con el parametro bottom (por defecto a true) habilitamos el safearea inferior o no
+          bottom: false,
           child: Column(
             children: [
-              Text("Hello")
+              Text("Hello"),
+              Expanded(
+                child: Container(
+                  color: Colors.red,
+                ),
+              ),
             ],
           ),
         ),
