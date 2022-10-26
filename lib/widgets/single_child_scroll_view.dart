@@ -11,8 +11,8 @@ class MySingleChildScrollView extends StatelessWidget {
           Container(
             height: 100,
             child: SingleChildScrollView(
-              // El parametro physics tiene como valor por defecto AlwaysScrollableScrollPhysics(), adaptandose a cada una de las plataformas (Android y iOS)
-              physics: AlwaysScrollableScrollPhysics(),
+              // El NeverScrollableScrollPhysics hace que se eliminen en ambas plataformas el efecto muelle
+              physics: NeverScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: List.generate(
