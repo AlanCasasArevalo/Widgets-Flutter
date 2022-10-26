@@ -5,7 +5,7 @@ class MySingleChildScrollView extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorsContainer = List.generate(
       18,
-          (index) => Container(
+      (index) => Container(
         height: 100,
         width: 100,
         alignment: Alignment.center,
@@ -29,9 +29,7 @@ class MySingleChildScrollView extends StatelessWidget {
                   child: SingleChildScrollView(
                     padding: EdgeInsets.all(8),
                     scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: colorsContainer
-                    ),
+                    child: Row(children: colorsContainer),
                   ),
                 ),
               ],
@@ -40,11 +38,19 @@ class MySingleChildScrollView extends StatelessWidget {
           Expanded(
             child: SizedBox(
               child: SingleChildScrollView(
+                // Con el parametro keyboardDismissBehavior lo que hacemos es esconder el teclado cuando empecemos a hacer scroll en el listado
+                keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+                reverse: false,
                 padding: EdgeInsets.all(8),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: colorsContainer
-                ),
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(18),
+                        child: TextField(),
+                      ),
+                      ...colorsContainer,
+                    ]),
               ),
             ),
           ),
