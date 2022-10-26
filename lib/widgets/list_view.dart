@@ -5,6 +5,8 @@ class MyListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
+        // Igual que con el componente SingleChildScrollView, este componente tiene el parametro physics: AlwaysScrollableScrollPhysics(), y funciona igual que el otro widget
+        physics: AlwaysScrollableScrollPhysics(),
         children: [
           Text("Hola"),
           Text("Hola"),
