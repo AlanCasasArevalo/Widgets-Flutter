@@ -3,8 +3,18 @@ import 'package:flutter/material.dart';
 class MySingleChildScrollView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: List.generate(
+            18,
+                (index) => Container(
+              height: 100,
+              color: Colors.primaries[index],
+            ),
+          ),
+        ),
+      )
     );
   }
 }
