@@ -6,12 +6,9 @@ class MyListView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          physics: AlwaysScrollableScrollPhysics(),
+          keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
           children: [
-            Text("Hola"),
-            Text("Hola"),
-            Text("Hola"),
+            TextField(),
             Text("Hola"),
             Container(
               height: 100,
