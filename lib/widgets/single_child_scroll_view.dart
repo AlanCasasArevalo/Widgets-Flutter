@@ -12,9 +12,8 @@ class MySingleChildScrollView extends StatelessWidget {
             height: 100,
             // Este SingleChildScrollView contiene una celda y con el parametro scrollDirection (por defecto con Axis.vertical) se haga scroll horizontal
             child: SingleChildScrollView(
-              // El efecto de muelle tipico de iOS se elimina (si se quiere) usando el parametro physics usando la clase ClampingScrollPhysics()
-              // se elimina dicho efecto muelle
-              physics: ClampingScrollPhysics(),
+              // El efecto de muelle tipico de iOS se agrega en dispositivos Android, usando la clase BouncingScrollPhysics() en physics
+              physics: BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: List.generate(
