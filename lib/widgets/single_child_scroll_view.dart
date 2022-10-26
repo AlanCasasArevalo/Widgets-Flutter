@@ -12,8 +12,10 @@ class MySingleChildScrollView extends StatelessWidget {
             height: 100,
             child: Row(
               children: [
-                SizedBox(
-                  width: 300,
+                FlutterLogo(
+                  size: 90,
+                ),
+                Expanded(
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
