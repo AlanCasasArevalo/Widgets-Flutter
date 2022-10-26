@@ -8,20 +8,30 @@ class MySafeArea extends StatelessWidget {
         color: Colors.grey,
         width: double.infinity,
         height: double.infinity,
-        // Haciendo que el SafeArea contenga el hijo Column hacemos que se vea mejor la imagen
-        child: SafeArea(
-          // Con el parametro bottom (por defecto a true) habilitamos el safearea inferior o no
-          bottom: false,
-          child: Column(
-            children: [
-              Text("Hello"),
-              Expanded(
-                child: Container(
-                  color: Colors.red,
+        child: Column(
+          children: [
+            Expanded(
+              child: Container(
+                color: Colors.blue,
+                width: double.infinity,
+                child: SafeArea(
+                  bottom: false,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("text@text.com"),
+                      Text("text@text.com"),
+                    ],
+                  ),
                 ),
               ),
-            ],
-          ),
+            ),
+            Expanded(
+              child: Container(
+                color: Colors.red,
+              ),
+            ),
+          ],
         ),
       ),
     );
