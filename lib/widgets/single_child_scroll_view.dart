@@ -3,13 +3,23 @@ import 'package:flutter/material.dart';
 class MySingleChildScrollView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final colorsContainer = List.generate(
+      18,
+          (index) => Container(
+        height: 100,
+        width: 100,
+        alignment: Alignment.center,
+        color: Colors.primaries[index],
+        child: Text("El color $index"),
+      ),
+    );
+
     return Scaffold(
         body: SafeArea(
       bottom: false,
       child: Column(
         children: [
           Container(
-            height: 100,
             child: Row(
               children: [
                 FlutterLogo(
@@ -17,18 +27,10 @@ class MySingleChildScrollView extends StatelessWidget {
                 ),
                 Expanded(
                   child: SingleChildScrollView(
+                    padding: EdgeInsets.all(8),
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: List.generate(
-                        18,
-                        (index) => Container(
-                          height: 100,
-                          width: 100,
-                          alignment: Alignment.center,
-                          color: Colors.primaries[index],
-                          child: Text("El color $index"),
-                        ),
-                      ),
+                      children: colorsContainer
                     ),
                   ),
                 ),
@@ -37,18 +39,11 @@ class MySingleChildScrollView extends StatelessWidget {
           ),
           Expanded(
             child: SizedBox(
-              height: 350,
               child: SingleChildScrollView(
+                padding: EdgeInsets.all(8),
                 child: Column(
-                  children: List.generate(
-                    18,
-                    (index) => Container(
-                      height: 100,
-                      alignment: Alignment.center,
-                      color: Colors.primaries[index],
-                      child: Text("El color $index"),
-                    ),
-                  ),
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: colorsContainer
                 ),
               ),
             ),
