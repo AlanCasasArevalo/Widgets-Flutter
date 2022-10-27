@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // Si en vez de usar MaterialApp usamos CupertinoApp TODOS los componentes que esten dentro de la aplicacion deberan
+    // ser de tipo cupertino, no de material debido a que por incompatibilidades fallara
     return CupertinoApp(
       home: MyCupertinoScaffold(),
     );
