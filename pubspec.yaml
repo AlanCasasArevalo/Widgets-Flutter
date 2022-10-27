@@ -76,12 +76,6 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Nunito Black
-      fonts:
-       - asset: assets/fonts/nunito/Nunito-Black.ttf
-       - asset: assets/fonts/nunito/Nunito-BlackItalic.ttf
-         style: italic
-
     - family: Nunito
       fonts:
        - asset: assets/fonts/nunito/Nunito-ExtraLight.ttf
@@ -124,8 +118,35 @@ flutter:
        - asset: assets/fonts/nunito/Nunito-BlackItalic.ttf
          weight: 900
          style: italic
-
-
+    - family: Titillium
+      fonts:
+       - asset: assets/fonts/titillium/TitilliumWeb-ExtraLight.ttf
+         weight: 200
+       - asset: assets/fonts/titillium/TitilliumWeb-ExtraLightItalic.ttf
+         weight: 200
+         style: italic
+       - asset: assets/fonts/titillium/TitilliumWeb-Light.ttf
+         weight: 300
+       - asset: assets/fonts/titillium/TitilliumWeb-LightItalic.ttf
+         weight: 300
+         style: italic
+       - asset: assets/fonts/titillium/TitilliumWeb-Regular.ttf
+         weight: 400
+       - asset: assets/fonts/titillium/TitilliumWeb-Italic.ttf
+         weight: 400
+         style: italic
+       - asset: assets/fonts/titillium/TitilliumWeb-SemiBold.ttf
+         weight: 600
+       - asset: assets/fonts/titillium/TitilliumWeb-SemiBoldItalic.ttf
+         weight: 600
+         style: italic
+       - asset: assets/fonts/titillium/TitilliumWeb-Bold.ttf
+         weight: 700
+       - asset: assets/fonts/titillium/TitilliumWeb-BoldItalic.ttf
+         weight: 700
+         style: italic
+       - asset: assets/fonts/titillium/TitilliumWeb-Black.ttf
+         weight: 900
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
