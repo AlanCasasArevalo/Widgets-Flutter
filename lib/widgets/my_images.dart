@@ -11,9 +11,9 @@ class MyImages extends StatelessWidget {
             'assets/images/wolverine_4.png',
             height: 300,
             width: 400,
-            // El parametro fitHeight permite hacer que la imagen se expanda en altura hasta alcanzar la altura que
+            // El parametro fitWidth permite hacer que la imagen se expanda en anchura hasta alcanzar la anchura que
             // le dijimos en los parametros
-            fit: BoxFit.fitHeight,
+            fit: BoxFit.fitWidth,
           ),
         ),
       ),
