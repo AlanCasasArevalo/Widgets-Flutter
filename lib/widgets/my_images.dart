@@ -6,6 +6,10 @@ class MyImages extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
+          // Si ponemos al contenedor de la imagen unas dimensiones, las dimensiones definidas en la
+          // Imagen sera ignorada cogiendo solo las del padre
+          height: 200,
+          width: 300,
           color: Colors.grey,
           child: Image.asset(
             'assets/images/wolverine_4.png',
