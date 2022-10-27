@@ -11,7 +11,9 @@ class MyCustomFonts extends StatelessWidget {
             Text(
               style: TextStyle(
                 fontSize: 20,
-                fontFamily: 'Nunito Black'
+                fontFamily: 'Nunito Black',
+                fontWeight: FontWeight.w100,
+                fontStyle: FontStyle.italic,
               ),
                 '''
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
