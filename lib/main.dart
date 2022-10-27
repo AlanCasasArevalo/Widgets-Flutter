@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'widgets/cuppertino_scaffold.dart';
 import 'widgets/custom_icons.dart';
 
 void main() {
@@ -11,8 +13,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyCustomIcons(),
+    return CupertinoApp(
+      home: MyCupertinoScaffold(),
     );
   }
 }
