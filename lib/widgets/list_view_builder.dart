@@ -3,16 +3,36 @@ import 'package:flutter/material.dart';
 class MyListViewBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    const names = ["Darwin", "Lulu", "Pepe"];
+
     return Scaffold(
       appBar: AppBar(),
-      // Creando el ListView como un builder evitamos problemas de renderimiento, lo que permite crear listas muy muy grandes, con imagenes sonidos videos etc y solo renderiza las 3 celdas siguientes que serian mostradas, por tanto evita que el sistema se sobrecargue
       body: ListView.separated(
         separatorBuilder: (_, int index) {
-          // Aqui podemos devolver cualquier tipo de widget, container, column, rows lo que queramos
-          return Divider();
+          return Row(
+            children: [
+              Expanded(
+                child: Container(
+                  color: Colors.black38,
+                  height: 2,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(8),
+                child: Text("${names[index].length}"),
+              ),
+              Expanded(
+                child: Container(
+                  color: Colors.black38,
+                  height: 2,
+                ),
+              ),
+            ],
+          );
         },
         itemBuilder: (BuildContext context, int index) {
           print("🧨 $index");
+          final nameModel = names[index];
           return Container(
             height: 100,
             margin: EdgeInsets.all(8),
@@ -21,13 +41,13 @@ class MyListViewBuilder extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FlutterLogo(),
-                Text("$index")
+                Text("$nameModel y sus caracteres son ${nameModel.length}")
               ],
             ),
             alignment: Alignment.center,
           );
         },
-        itemCount: 10000,
+        itemCount: names.length,
       ),
     );
   }
