@@ -9,6 +9,8 @@ class MyCustomIcons extends StatelessWidget {
           Icons.accessible_forward_sharp,
           size: 50,
           color: Color(0xff894068),
+          //Este parametro de semanticLabel sirve para aplicaciones de accesibilidad
+          semanticLabel: 'Icono silla de ruedas corriendo',
         ),
       ),
     );
