@@ -5,84 +5,48 @@ class MyListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
-            SizedBox(
-              height: 100,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children:
-                  List.generate(
-                    18,
-                    (index) => Container(
-                      alignment: Alignment.center,
-                      width: 100,
-                      height: 100,
-                      color: Colors.primaries[index],
-                      child: Text("$index"),
+            Column(
+              children: [
+                SizedBox(
+                  height: 100,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: List.generate(
+                      18,
+                      (index) => Container(
+                        alignment: Alignment.center,
+                        width: 100,
+                        height: 100,
+                        color: Colors.primaries[index],
+                        child: Text("$index"),
+                      ),
                     ),
-                  )
-                ,
-              ),
-            ),
-            Expanded(
-              child: ListView(
-                keyboardDismissBehavior:
-                    ScrollViewKeyboardDismissBehavior.onDrag,
-                children: [
-                  TextField(),
-                  Text("Hola"),
-                  Container(
-                    height: 100,
-                    color: Colors.blue,
                   ),
-                  Container(
-                    height: 100,
-                    color: Colors.red,
+                ),
+                ListView(
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  children: List.generate(
+                    5,
+                    (index) => Container(
+                      color: Colors.blue,
+                      margin: EdgeInsets.all(8),
+                      height: 50,
+                    ),
                   ),
-                  Container(
-                    height: 100,
-                    color: Colors.blue,
-                  ),
-                  Text("Hola"),
-                  Container(
-                    height: 300,
-                    color: Colors.red,
-                  ),
-                  Text("Hola"),
-                  Container(
-                    height: 300,
-                    color: Colors.blue,
-                  ),
-                  Text("Hola"),
-                  Container(
-                    height: 300,
-                    color: Colors.red,
-                  ),
-                  Text("Hola"),
-                  Container(
-                    height: 100,
-                    color: Colors.blue,
-                  ),
-                  Text("Hola"),
-                  Container(
-                    height: 300,
-                    color: Colors.red,
-                  ),
-                  Text("Hola"),
-                  Container(
-                    height: 300,
-                    color: Colors.blue,
-                  ),
-                  Text("Hola"),
-                  Container(
-                    height: 300,
-                    color: Colors.red,
-                  ),
-                  Text("Hola"),
-                ],
-              ),
-            ),
+                ),
+                Container(
+                  color: Colors.red,
+                  height: 150,
+                ),
+                Container(
+                  color: Colors.green,
+                  height: 350,
+                ),
+              ],
+            )
           ],
         ),
       ),
