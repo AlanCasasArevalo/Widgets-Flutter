@@ -6,7 +6,11 @@ class MyListViewBuilder extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       // Creando el ListView como un builder evitamos problemas de renderimiento, lo que permite crear listas muy muy grandes, con imagenes sonidos videos etc y solo renderiza las 3 celdas siguientes que serian mostradas, por tanto evita que el sistema se sobrecargue
-      body: ListView.builder(
+      body: ListView.separated(
+        separatorBuilder: (_, int index) {
+          // Aqui podemos devolver cualquier tipo de widget, container, column, rows lo que queramos
+          return Divider();
+        },
         itemBuilder: (BuildContext context, int index) {
           print("🧨 $index");
           return Container(
