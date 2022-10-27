@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.widgets">
-   <application
+<!--  Si no esta este permiso en la app no se podra ver ninguna imagen en el target de produccion  -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
         android:label="widgets"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
