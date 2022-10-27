@@ -11,9 +11,9 @@ class MyImages extends StatelessWidget {
             'assets/images/wolverine_4.png',
             height: 300,
             width: 400,
-            // El parametro fill permite hacer que la imagen se deforme hasta alcanzar los valores que le pusimos nosotros
-            // como alto y ancho
-            fit: BoxFit.fill,
+            // El parametro fitHeight permite hacer que la imagen se expanda en altura hasta alcanzar la altura que
+            // le dijimos en los parametros
+            fit: BoxFit.fitHeight,
           ),
         ),
       ),
