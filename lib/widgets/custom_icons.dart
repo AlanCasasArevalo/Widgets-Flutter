@@ -7,6 +7,8 @@ class MyCustomIcons extends StatelessWidget {
       body: Center(
         child: Icon(
           Icons.accessible_forward_sharp,
+          size: 50,
+          color: Color(0xff894068),
         ),
       ),
     );
