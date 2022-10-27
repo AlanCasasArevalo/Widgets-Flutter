@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/list_view.dart';
+import 'widgets/custom_font.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyListView(),
+      home: MyCustomFonts(),
     );
   }
 }
