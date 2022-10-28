@@ -24,10 +24,11 @@ class Stories extends StatelessWidget {
         itemBuilder: (_, index) {
           final story = _stories[index];
           return Stack(
-            alignment: Alignment.bottomCenter,
+            alignment: Alignment.topCenter,
             children: [
               Container(
                 width: 120,
+                height: 170 - (40 / 2),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   image: DecorationImage(
