@@ -5,6 +5,7 @@ import 'package:widgets/facebook_ui/widgets/circle_buton.dart';
 import 'package:widgets/icons/custom_icons_icons.dart';
 import 'widgets/WhatIsOnYourMind.dart';
 import 'widgets/quick_actions.dart';
+import 'widgets/stories.dart';
 
 class MyFacebookUI extends StatelessWidget {
   @override
@@ -54,15 +55,19 @@ class MyFacebookUI extends StatelessWidget {
         ],
       ),
       body: ListView(
-        padding: EdgeInsets.symmetric(
-          horizontal: 24,
-        ).copyWith(top: 24),
         children: [
-          WhatIsOnYourMind(),
-          SizedBox(
-            height: 32,
+          Padding(
+            padding: EdgeInsets.only(top: 32, right: 16, left: 16),
+            child: WhatIsOnYourMind(),
           ),
-          QuickActions(),
+          Padding(
+            padding: EdgeInsets.only(top: 24, right: 16, left: 16),
+            child: QuickActions(),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 24, left: 16),
+            child: Stories(),
+          ),
         ],
       ),
     );
