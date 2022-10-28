@@ -5,7 +5,7 @@ import 'circle_buton.dart';
 class QuickActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Wrap(
       children: [
         QuickButton(
           title: "Gallery",
