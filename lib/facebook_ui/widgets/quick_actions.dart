@@ -5,27 +5,34 @@ import 'circle_buton.dart';
 class QuickActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      spacing: 16,
-      runSpacing: 8,
-      alignment: WrapAlignment.center,
-      children: [
-        QuickButton(
-          title: "Gallery",
-          iconData: CustomIcons.photos,
-          color: Color(0xff92be87),
-        ),
-        QuickButton(
-          title: "Tag friends",
-          iconData: CustomIcons.user_friends,
-          color: Color(0xff2880d4),
-        ),
-        QuickButton(
-          title: "Live",
-          iconData: CustomIcons.video_camera,
-          color: Color(0xffFb7171),
-        ),
-      ],
+    return FittedBox(
+      fit: BoxFit.scaleDown,
+      alignment: Alignment.centerLeft,
+      child: Row(
+        children: [
+          QuickButton(
+            title: "Gallery",
+            iconData: CustomIcons.photos,
+            color: Color(0xff92be87),
+          ),
+          SizedBox(
+            width: 16,
+          ),
+          QuickButton(
+            title: "Tag friends",
+            iconData: CustomIcons.user_friends,
+            color: Color(0xff2880d4),
+          ),
+          SizedBox(
+            width: 16,
+          ),
+          QuickButton(
+            title: "Live",
+            iconData: CustomIcons.video_camera,
+            color: Color(0xffFb7171),
+          ),
+        ],
+      ),
     );
   }
 }
