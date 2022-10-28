@@ -1,10 +1,11 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:widgets/facebook_ui/facebook_ui.dart';
+import 'package:flutter/foundation.dart';
 
 void main() {
   runApp(DevicePreview(
-    enabled: true,
+    enabled: !kReleaseMode,
     builder: (context) => MyApp(),
   ));
 }
