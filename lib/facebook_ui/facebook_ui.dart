@@ -65,7 +65,7 @@ class MyFacebookUI extends StatelessWidget {
             child: QuickActions(),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 24, left: 16),
+            padding: EdgeInsets.only(top: 24, right: 0, left: 0),
             child: Stories(),
           ),
         ],
