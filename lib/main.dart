@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:widgets/widgets/my_images.dart';
+import 'package:widgets/facebook_ui/facebook_ui.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +11,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
-      home: MyImages(),
+    return MaterialApp(
+      home: MyFacebookUI(),
     );
   }
 }

@@ -2,7 +2,16 @@
 class Assets {
   Assets._();
 
-  static const String imagesWolverine1 = 'assets/images/wolverine.png';
+  static const String emojisAngry = 'assets/emojis/angry.svg';
+  static const String emojisHeart = 'assets/emojis/heart.svg';
+  static const String emojisLaughing = 'assets/emojis/laughing.svg';
+  static const String emojisLike = 'assets/emojis/like.svg';
+  static const String emojisSad = 'assets/emojis/sad.svg';
+  static const String emojisShocked = 'assets/emojis/shocked.svg';
+  static const String facebookLogoFacebook = 'assets/facebook-logo/facebook-logo.svg';
+  static const String iconsConfig = 'assets/icons/config.json';
+  static const String iconsCustomIcons = 'assets/icons/CustomIcons.ttf';
+  static const String imagesWolverine = 'assets/images/wolverine.png';
   static const String imagesWolverine2 = 'assets/images/wolverine_2.png';
   static const String imagesWolverine3 = 'assets/images/wolverine_3.png';
   static const String imagesWolverine4 = 'assets/images/wolverine_4.png';
@@ -24,6 +33,8 @@ class Assets {
   static const String nunitoNunitoSemiBold = 'assets/fonts/nunito/Nunito-SemiBold.ttf';
   static const String nunitoNunitoSemiBoldItalic = 'assets/fonts/nunito/Nunito-SemiBoldItalic.ttf';
   static const String nunitoNunitoVariableFontWght = 'assets/fonts/nunito/Nunito-VariableFont_wght.ttf';
+  static const String publicationsFerrari = 'assets/publications/ferrari.jpeg';
+  static const String publicationsFlutter = 'assets/publications/flutter.jpeg';
   static const String titilliumTitilliumWebBlack = 'assets/fonts/titillium/TitilliumWeb-Black.ttf';
   static const String titilliumTitilliumWebBold = 'assets/fonts/titillium/TitilliumWeb-Bold.ttf';
   static const String titilliumTitilliumWebBoldItalic = 'assets/fonts/titillium/TitilliumWeb-BoldItalic.ttf';
@@ -35,5 +46,19 @@ class Assets {
   static const String titilliumTitilliumWebRegular = 'assets/fonts/titillium/TitilliumWeb-Regular.ttf';
   static const String titilliumTitilliumWebSemiBold = 'assets/fonts/titillium/TitilliumWeb-SemiBold.ttf';
   static const String titilliumTitilliumWebSemiBoldItalic = 'assets/fonts/titillium/TitilliumWeb-SemiBoldItalic.ttf';
+  static const String users1 = 'assets/users/1.jpg';
+  static const String users2 = 'assets/users/2.jpg';
+  static const String users3 = 'assets/users/3.jpg';
+  static const String users4 = 'assets/users/4.jpg';
+  static const String users5 = 'assets/users/5.jpg';
+  static const String users6 = 'assets/users/6.jpg';
+  static const String users7 = 'assets/users/7.jpg';
+  static const String users8 = 'assets/users/8.jpg';
+  static const String wallpapers1 = 'assets/wallpapers/1.jpeg';
+  static const String wallpapers2 = 'assets/wallpapers/2.jpeg';
+  static const String wallpapers3 = 'assets/wallpapers/3.jpeg';
+  static const String wallpapers4 = 'assets/wallpapers/4.jpeg';
+  static const String wallpapers5 = 'assets/wallpapers/5.jpeg';
+  static const String wallpapers6 = 'assets/wallpapers/6.jpeg';
 
 }
