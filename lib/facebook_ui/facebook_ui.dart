@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:widgets/facebook_ui/widgets/circle_buton.dart';
 import 'package:widgets/icons/custom_icons_icons.dart';
 
 class MyFacebookUI extends StatelessWidget {
@@ -18,20 +19,24 @@ class MyFacebookUI extends StatelessWidget {
           color: Colors.blueAccent,
           width: 150,
         ),
-        actions: [
-          Container(
-            width: 40,
-            height: 40,
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              shape: BoxShape.circle
-            ),
-            child: Icon(
-              CustomIcons.search,
-              color: Colors.white,
-              size: 16,
-            ),
-          )
+        actions: const [
+          CircleButton(
+            color: Colors.grey,
+            iconData: CustomIcons.search,
+          ),
+          CircleButton(
+            color: Color(0xffFA7571),
+            iconData: CustomIcons.bell,
+          ),
+
+          CircleButton(
+            color: Color(0xff85B5F5),
+            iconData: CustomIcons.user_friends,
+          ),
+          CircleButton(
+            color: Color(0xff2386DD),
+            iconData: CustomIcons.messenger,
+          ),
         ],
       ),
     );
