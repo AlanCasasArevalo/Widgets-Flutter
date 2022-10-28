@@ -24,18 +24,29 @@ class MyFacebookUI extends StatelessWidget {
             color: Colors.grey,
             iconData: CustomIcons.search,
           ),
+          SizedBox(
+            width: 15,
+          ),
           CircleButton(
             color: Color(0xffFA7571),
             iconData: CustomIcons.bell,
           ),
-
+          SizedBox(
+            width: 15,
+          ),
           CircleButton(
             color: Color(0xff85B5F5),
             iconData: CustomIcons.user_friends,
           ),
+          SizedBox(
+            width: 15,
+          ),
           CircleButton(
             color: Color(0xff2386DD),
             iconData: CustomIcons.messenger,
+          ),
+          SizedBox(
+            width: 15,
           ),
         ],
       ),
