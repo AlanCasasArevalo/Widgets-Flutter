@@ -14,6 +14,8 @@ class PublicationItem extends StatelessWidget {
   final double _imageHeight = 180;
   final double _imageWidth = double.infinity;
 
+  final double _emojiSize = 24;
+
   String _getEmojiPath(Reactions reaction) {
     switch (reaction) {
       case Reactions.like:
@@ -71,20 +73,38 @@ class PublicationItem extends StatelessWidget {
               publication.title,
             ),
           ),
-          Row(
-            children: [
-              ...List.generate(
-                reactions.length,
-                (index) {
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16).copyWith(
+              bottom: 8
+            ),
+            child: Row(
+              children: [
+                ...List.generate(reactions.length, (index) {
                   final reaction = reactions[index];
-                  return SvgPicture.asset(
-                    _getEmojiPath(reaction),
-                    width: 32,
-                    height: 32,
+                  final isActiveReaction = reaction == publication.currentUserReactions;
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 8.0),
+                    child: Column(
+                      children: [
+                        SvgPicture.asset(
+                          _getEmojiPath(reaction),
+                          width: _emojiSize,
+                          height: _emojiSize,
+                        ),
+                        SizedBox(
+                          height: 3,
+                        ),
+                        Icon(
+                          Icons.circle,
+                          color: isActiveReaction ? Colors.redAccent : Colors.transparent,
+                          size: 5,
+                        ),
+                      ],
+                    ),
                   );
-                }
-              ),
-            ],
+                }),
+              ],
+            ),
           )
         ],
       ),
