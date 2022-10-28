@@ -27,21 +27,20 @@ class CircleButton extends StatelessWidget {
               size: 16,
             ),
           ),
-          isShowBadge
-              ? Positioned(
-                  top: -3,
-                  right: 0,
-                  child: Container(
-                    width: 13,
-                    height: 13,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.red,
-                      border: Border.all(width: 3, color: Colors.white),
-                    ),
-                  ),
-                )
-              : Container(height: 0,),
+          if (isShowBadge)
+            Positioned(
+              top: -3,
+              right: 0,
+              child: Container(
+                width: 13,
+                height: 13,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.red,
+                  border: Border.all(width: 3, color: Colors.white),
+                ),
+              ),
+            )
         ],
       ),
     );
