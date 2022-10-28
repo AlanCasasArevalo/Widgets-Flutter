@@ -23,29 +23,36 @@ class Stories extends StatelessWidget {
         itemCount: _stories.length,
         itemBuilder: (_, index) {
           final story = _stories[index];
-          return Stack(
-            alignment: Alignment.topCenter,
-            children: [
-              Container(
-                width: 120,
-                height: 170 - (40 / 2),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  image: DecorationImage(
-                    image: AssetImage(story.backgroundImage),
-                    fit: BoxFit.cover,
+          return SizedBox(
+            height: 170,
+            width: 120,
+            child: Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                Positioned(
+                  top: 0,
+                  child: Container(
+                    width: 120,
+                    height: 170 - (40 / 2),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      image: DecorationImage(
+                        image: AssetImage(story.backgroundImage),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
-              ),
-              Positioned(
-                bottom: 0,
-                child: Avatar(
-                  size: 50,
-                  avatarAsset: story.avatar,
-                  borderWidth: 3,
+                Positioned(
+                  bottom: 0,
+                  child: Avatar(
+                    size: 50,
+                    avatarAsset: story.avatar,
+                    borderWidth: 3,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           );
         },
       ),
