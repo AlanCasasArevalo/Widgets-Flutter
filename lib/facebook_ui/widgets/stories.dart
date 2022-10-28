@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:widgets/facebook_ui/widgets/avatar.dart';
 import '../../models/story_model.dart';
+import 'stories_list.dart';
 
 final _stories = [
   StoryModel('assets/wallpapers/1.jpeg', 'assets/users/1.jpg',
@@ -15,7 +15,6 @@ final _stories = [
 ];
 
 class Stories extends StatelessWidget {
-
   final double _backgroundHeight = 160;
   final double _backgroundWidth = 90;
 
@@ -28,56 +27,14 @@ class Stories extends StatelessWidget {
         itemCount: _stories.length,
         itemBuilder: (_, index) {
           final story = _stories[index];
-          return Container(
-            height: _backgroundHeight,
-            width: _backgroundWidth,
-            margin: EdgeInsets.only(
-              right: 16,
-              left: index == 0 ? 16 : 0
-            ),
-            child: Column(
-              children: [
-                Expanded(
-                  child: Stack(
-                    alignment: Alignment.bottomCenter,
-                    children: [
-                      Positioned(
-                        top: 0,
-                        bottom: 20,
-                        left: 0,
-                        right: 0,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
-                              image: AssetImage(story.backgroundImage),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        bottom: 0,
-                        child: Avatar(
-                          size: 50,
-                          avatarAsset: story.avatar,
-                          borderWidth: 3,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Text(
-                  story.username,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
-          );
+          return StoriesList(
+              backgroundHeight: _backgroundHeight,
+              backgroundWidth: _backgroundWidth,
+              isFirstItem: index == 0,
+              story: story);
         },
       ),
     );
   }
 }
+
