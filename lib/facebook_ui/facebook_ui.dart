@@ -29,8 +29,8 @@ class MyFacebookUI extends StatelessWidget {
           commentsCount: random.integer(50000),
           sharesCount: random.integer(50000),
           user: User(
-            faker.person.firstName(),
             faker.image.image(),
+            faker.person.firstName(),
           ),
           currentUserReactions: reactions[reactionsIndex]);
       publications.add(publication);
