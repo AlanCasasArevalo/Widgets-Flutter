@@ -1,3 +1,8 @@
 enum Reactions {
-  angry, heart, laughing, like, sad, shocked
+  like,
+  heart,
+  laughing,
+  shocked,
+  sad,
+  angry,
 }
