@@ -18,7 +18,6 @@ class MyFacebookUI extends StatelessWidget {
     final faker = Faker();
     final random = faker.randomGenerator;
     const reactions = Reactions.values;
-    final reactionsIndex = random.integer(reactions.length - 1);
     final publications = <Publication>[];
 
     for (int i = 0; i < 50; i++) {
@@ -32,7 +31,7 @@ class MyFacebookUI extends StatelessWidget {
             faker.image.image(),
             faker.person.firstName(),
           ),
-          currentUserReactions: reactions[reactionsIndex]);
+          currentUserReactions: reactions[random.integer(5)]);
       publications.add(publication);
     }
 
