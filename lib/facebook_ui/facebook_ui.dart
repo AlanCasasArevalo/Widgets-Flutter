@@ -59,6 +59,9 @@ class MyFacebookUI extends StatelessWidget {
         ).copyWith(top: 24),
         children: [
           WhatIsOnYourMind(),
+          SizedBox(
+            height: 32,
+          ),
           QuickActions(),
         ],
       ),
