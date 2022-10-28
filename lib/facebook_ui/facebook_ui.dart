@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:widgets/facebook_ui/widgets/circle_buton.dart';
 import 'package:widgets/icons/custom_icons_icons.dart';
-
 import 'widgets/WhatIsOnYourMind.dart';
+import 'widgets/quick_actions.dart';
 
 class MyFacebookUI extends StatelessWidget {
   @override
@@ -59,6 +59,7 @@ class MyFacebookUI extends StatelessWidget {
         ).copyWith(top: 24),
         children: [
           WhatIsOnYourMind(),
+          QuickActions(),
         ],
       ),
     );
