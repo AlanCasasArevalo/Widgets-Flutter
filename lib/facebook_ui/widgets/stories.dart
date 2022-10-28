@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets/facebook_ui/widgets/avatar.dart';
 import '../../models/story_model.dart';
 
 final _stories = [
@@ -22,10 +23,28 @@ class Stories extends StatelessWidget {
         itemCount: _stories.length,
         itemBuilder: (_, index) {
           final story = _stories[index];
-          return Container(
-            margin: EdgeInsets.symmetric(horizontal: 5),
-            width: 80,
-            color: Colors.grey
+          return Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              Container(
+                width: 120,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  image: DecorationImage(
+                    image: AssetImage(story.backgroundImage),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                child: Avatar(
+                  size: 50,
+                  avatarAsset: story.avatar,
+                  borderWidth: 3,
+                ),
+              ),
+            ],
           );
         },
       ),
