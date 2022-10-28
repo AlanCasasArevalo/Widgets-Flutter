@@ -10,7 +10,7 @@ class QuickActions extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: Row(
         children: [
-          QuickButton(
+          _QuickButton(
             title: "Gallery",
             iconData: CustomIcons.photos,
             color: Color(0xff92be87),
@@ -18,7 +18,7 @@ class QuickActions extends StatelessWidget {
           SizedBox(
             width: 16,
           ),
-          QuickButton(
+          _QuickButton(
             title: "Tag friends",
             iconData: CustomIcons.user_friends,
             color: Color(0xff2880d4),
@@ -26,7 +26,7 @@ class QuickActions extends StatelessWidget {
           SizedBox(
             width: 16,
           ),
-          QuickButton(
+          _QuickButton(
             title: "Live",
             iconData: CustomIcons.video_camera,
             color: Color(0xffFb7171),
@@ -37,12 +37,12 @@ class QuickActions extends StatelessWidget {
   }
 }
 
-class QuickButton extends StatelessWidget {
+class _QuickButton extends StatelessWidget {
   final IconData iconData;
   final Color color;
   final String title;
 
-  const QuickButton({
+  const _QuickButton({
     Key? key,
     required this.iconData,
     required this.color,
