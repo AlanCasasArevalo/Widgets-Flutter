@@ -45,7 +45,15 @@ class PublicationItem extends StatelessWidget {
     const reactions = Reactions.values;
 
     return Container(
-      // width: double.infinity,
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        border: Border(
+          top: BorderSide(
+            width: 6,
+                color: Color(0xffEBEBEB)
+          ),
+        ),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -54,7 +62,7 @@ class PublicationItem extends StatelessWidget {
             child: Row(
               children: [
                 Avatar(size: 38, avatarAsset: 'assets/users/1.jpg'),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
                 Text(
@@ -67,16 +75,22 @@ class PublicationItem extends StatelessWidget {
               ],
             ),
           ),
-          CachedNetworkImage(
-            height: _imageHeight,
-            width: _imageWidth,
-            fit: BoxFit.cover,
-            imageUrl: publication.imageUrl,
+          AspectRatio(
+            aspectRatio: 16 / 9,
+            child: CachedNetworkImage(
+              height: _imageHeight,
+              width: _imageWidth,
+              fit: BoxFit.cover,
+              imageUrl: publication.imageUrl,
+            ),
           ),
           Padding(
             padding: padding.copyWith(top: 16),
             child: Text(
               publication.title,
+              style: const TextStyle(
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
           Padding(
@@ -89,7 +103,7 @@ class PublicationItem extends StatelessWidget {
                   children: [
                     ...List.generate(
                       reactions.length,
-                          (index) {
+                      (index) {
                         final reaction = reactions[index];
                         final isActiveReaction =
                             reaction == publication.currentUserReactions;
@@ -102,7 +116,7 @@ class PublicationItem extends StatelessWidget {
                                 width: _emojiSize,
                                 height: _emojiSize,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 3,
                               ),
                               Icon(
@@ -117,29 +131,28 @@ class PublicationItem extends StatelessWidget {
                         );
                       },
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
-
                   ],
                 ),
                 Flexible(
                   child: Padding(
-                    padding: const EdgeInsets.only(
-                      bottom: 8
-                    ),
+                    padding: const EdgeInsets.only(bottom: 8),
                     child: FittedBox(
-                      child: Row(children: [
+                      child: Row(
+                        children: [
                           Text(
                             "${formatCount(publication.commentsCount)} Comments",
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 16,
                           ),
                           Text(
                             "${formatCount(publication.sharesCount)} Shares",
                           ),
-                        ],),
+                        ],
+                      ),
                     ),
                   ),
                 ),
