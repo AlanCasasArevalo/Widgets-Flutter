@@ -33,6 +33,12 @@ class PublicationItem extends StatelessWidget {
     }
   }
 
+  String formatCount(int value) {
+    return value <= 1000
+        ? value.toString()
+        : "${(value / 1000).toStringAsFixed(1)} K";
+  }
+
   @override
   Widget build(BuildContext context) {
     final padding = EdgeInsets.symmetric(horizontal: 16, vertical: 8);
@@ -74,35 +80,69 @@ class PublicationItem extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16).copyWith(
-              bottom: 8
-            ),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 16).copyWith(bottom: 8),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ...List.generate(reactions.length, (index) {
-                  final reaction = reactions[index];
-                  final isActiveReaction = reaction == publication.currentUserReactions;
-                  return Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: Column(
-                      children: [
-                        SvgPicture.asset(
-                          _getEmojiPath(reaction),
-                          width: _emojiSize,
-                          height: _emojiSize,
-                        ),
-                        SizedBox(
-                          height: 3,
-                        ),
-                        Icon(
-                          Icons.circle,
-                          color: isActiveReaction ? Colors.redAccent : Colors.transparent,
-                          size: 5,
-                        ),
-                      ],
+                Row(
+                  children: [
+                    ...List.generate(
+                      reactions.length,
+                          (index) {
+                        final reaction = reactions[index];
+                        final isActiveReaction =
+                            reaction == publication.currentUserReactions;
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 8.0),
+                          child: Column(
+                            children: [
+                              SvgPicture.asset(
+                                _getEmojiPath(reaction),
+                                width: _emojiSize,
+                                height: _emojiSize,
+                              ),
+                              SizedBox(
+                                height: 3,
+                              ),
+                              Icon(
+                                Icons.circle,
+                                color: isActiveReaction
+                                    ? Colors.redAccent
+                                    : Colors.transparent,
+                                size: 5,
+                              ),
+                            ],
+                          ),
+                        );
+                      },
                     ),
-                  );
-                }),
+                    SizedBox(
+                      width: 16,
+                    ),
+
+                  ],
+                ),
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      bottom: 8
+                    ),
+                    child: FittedBox(
+                      child: Row(children: [
+                          Text(
+                            "${formatCount(publication.commentsCount)} Comments",
+                          ),
+                          SizedBox(
+                            width: 16,
+                          ),
+                          Text(
+                            "${formatCount(publication.sharesCount)} Shares",
+                          ),
+                        ],),
+                    ),
+                  ),
+                ),
               ],
             ),
           )
