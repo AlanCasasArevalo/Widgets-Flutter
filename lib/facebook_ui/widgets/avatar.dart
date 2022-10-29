@@ -5,11 +5,19 @@ class Avatar extends StatelessWidget {
   final String avatarAsset;
   final double borderWidth;
 
-  const Avatar({Key? key, required this.size, required this.avatarAsset, this.borderWidth = 0})
+  const Avatar(
+      {Key? key,
+      required this.size,
+      required this.avatarAsset,
+      this.borderWidth = 0})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final isFromNetwork = avatarAsset.startsWith('http://') || avatarAsset.startsWith('https://');
+    final imageProvider =
+        isFromNetwork ? NetworkImage(avatarAsset) : AssetImage(avatarAsset) as ImageProvider;
+
     return Container(
       width: size,
       height: size,
@@ -20,7 +28,8 @@ class Avatar extends StatelessWidget {
           color: Colors.white,
         ),
         image: DecorationImage(
-          image: AssetImage(avatarAsset),
+          fit: BoxFit.cover,
+          image: imageProvider,
         ),
       ),
     );

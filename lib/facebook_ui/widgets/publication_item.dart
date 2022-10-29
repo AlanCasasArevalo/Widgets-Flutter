@@ -48,10 +48,7 @@ class PublicationItem extends StatelessWidget {
       width: double.infinity,
       decoration: const BoxDecoration(
         border: Border(
-          top: BorderSide(
-            width: 6,
-                color: Color(0xffEBEBEB)
-          ),
+          top: BorderSide(width: 6, color: Color(0xffEBEBEB)),
         ),
       ),
       child: Column(
@@ -61,7 +58,10 @@ class PublicationItem extends StatelessWidget {
             padding: padding,
             child: Row(
               children: [
-                Avatar(size: 38, avatarAsset: 'assets/users/1.jpg'),
+                Avatar(
+                  size: 38,
+                  avatarAsset: publication.user.avatar,
+                ),
                 const SizedBox(
                   width: 16,
                 ),
